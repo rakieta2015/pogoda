@@ -1,0 +1,14 @@
+/*
+Marcin Michałek
+07.12.2017
+app.css
+*/
+
+.continer{
+	margin-left:40px;
+	margin-right:40px;
+}
+
+#selectCity{
+	max-width:200px;
+}

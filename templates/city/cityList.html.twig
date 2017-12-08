@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	
+	<br><br>
+	<a href="{{ path('addCity') }}" class="btn btn-primary btn-md">Dodaj miasto</a>
+	<br><br>
+	<table class="table table-bordered">
+		<tr>
+			<th>
+				Nazwa
+			</th>
+			<th>
+				Długość geograficzna
+			</th>
+			<th>
+				Szerokość geograficzna
+			</th>
+			<th>
+			
+			</th>
+		</tr>
+		{% for r in result %}
+			<tr>
+				<td>
+					{{ r.name }}
+				</td>
+				<td>
+					{{ r.geoLat }}
+				</td>
+				<td>
+					{{ r.geoLon }}
+				</td>
+				<td>
+					<a href="{{ path('editCity', { id:r.id }) }}" class="btn btn-warning btn-md">Edytuj</a>
+					<a href="{{ path('removeCity', {id: r.id}) }}" class="btn btn-danger btn-md">Usuń</a>
+				</td>
+			</tr>	
+		{% endfor %}
+	</table>
+	
+	
+	
+{% endblock %}

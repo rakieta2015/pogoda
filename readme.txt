@@ -1,0 +1,2 @@
+Login: admin
+Hasło: admin

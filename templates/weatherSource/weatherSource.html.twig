@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+	
+
+{% endblock %}
+
+{% block body %}
+
+	<h2>Wybór źródła danych</h2>
+	<br><br>
+	<form action="{{ path('weatherSource') }}" method="POST">
+		<select class="form-control" id="selectCity" name="source">
+			{% for s in sources %}
+				{% if s == source %}
+					<option selected>{{ s }}</option>
+				{% else %}
+					<option>{{ s }}</option>
+				{% endif %}
+			{% endfor %}
+		</select>
+		<br><br>
+		<button type="submit" class="btn btn-primary btn-md">Zapisz</button>
+	</form>
+	
+	
+{% endblock %}
